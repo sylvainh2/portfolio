@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
-let cont=document.querySelector("#canvasContainer");
 function Cv() {
-    console.log(cont);
-    cont.setAttribute("class","canvasDisp");
     return(
         <>
             <section className="page">

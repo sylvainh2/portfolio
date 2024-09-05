@@ -3,6 +3,14 @@
   font-family: "roboto";
   src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
 }
+*{
+  margin:0;
+  padding:0;
+}
+/**************************************************************************************************/
+/*                                              Home                                              */
+/**************************************************************************************************/
+
 .navigationList{
   display:flex;
   align-items: center;
@@ -17,7 +25,7 @@
   overflow:hidden;
 }
 .boite2{
-  width:11vw;
+  width:8vw;
 }
 .textdef{
   text-decoration: none;
@@ -39,11 +47,14 @@
   width:7vw;
   margin-left:2vw;
 }
+.logo{
+  margin-top:0.5vh;
+}
 header{
   display: flex;
   align-items: center;
-  height:7vw;
-  background: linear-gradient(to right, #283048, #859398);
+  height:7.5vw;
+  background: linear-gradient(to right,rgba(21,165,239,1), rgba(183,226,253,1));
   justify-content: space-between;
 }
 .imageLogo:hover{
@@ -53,6 +64,17 @@ header{
   from {transform: rotate(0);}
   to {transform: rotate(360deg);}
 }
+body{
+  background-image: url(../public/concept-collage-html-css.jpg);
+  width:100%;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+/**************************************************************************************************/
+/*                                              CV                                                */
+/**************************************************************************************************/
+
 .page{
   display: flex;
 }
@@ -64,6 +86,7 @@ header{
 .workColumn{
   width:70%;
   text-align: center;
+  background-color: white;
 }
 .photoid{
   margin: 1vh 0 1vh 0;
@@ -91,7 +114,7 @@ header{
 }
 .workContainer{
   background-color: white;
-  height: 90%;
+  /* height: 95vw; */
   padding-top: 4vh;
 }
 .articleExp{
@@ -100,6 +123,7 @@ header{
 .work{
   width:90%;
   text-align: center;
+  margin-bottom:3vw;
 }
 .workAdd{
   width:90%;
@@ -107,7 +131,7 @@ header{
 .name{
   font-size: 4vw;
   text-transform: uppercase;
-  margin: 3vh 0 -2vh 0;
+  margin: 3vh 0 0 0;
 
 }
 .titleName{
@@ -181,7 +205,7 @@ header{
   font-family: roboto;
 }
 .exp:nth-of-type(2){
-  margin: 0 auto 2em;
+  margin: 2vw auto 2vw;
 }
 .list{
   display:inline;
@@ -204,25 +228,26 @@ header{
   font-size: 1.3vw;
   width:90%;
   text-align: left;
-  margin: 2em auto 3em;
+  margin: 2vw auto 3vw;
 }
 span{
   border-left: 3px solid black;
   margin: 0 1vw 0 1vw;
 }
+
+/**************************************************************************************************/
+/*                                              Space                                             */
+/**************************************************************************************************/
+
 #canvasContainer{
 text-align: center;
 }
-.canvasDisp{
-  display:none;
+canvas{
+  background-color: lightgrey;
 }
-body{
-  background-image: url(../public/concept-collage-html-css.jpg);
-  width:100%;
-  background-size:cover;
-  background-repeat: no-repeat;
-}
+
 #invaderTitle{
   color:white;
   text-transform: uppercase;
+  margin: 2vh;
 }
