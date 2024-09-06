@@ -422,6 +422,7 @@ const positionInit=[
 
 function Space(){
 
+    console.log("on passe");
     const demoCanvas = useRef(null);
     const musique = useRef(null);
     const explosion = useRef(null);
@@ -433,7 +434,8 @@ function Space(){
     stage = new Stage(myCanvas);
 
     music = musique.current;
-    music.autoplay = true;
+    // music.autoplay = true;
+    // music.play();
     music.volume = 0.1;
     explode = explosion.current;
     zap = tir.current;
@@ -498,6 +500,7 @@ function Space(){
         //*****************************************************************************************************//
 
         console.log("debut");
+        music.play();
         window.addEventListener("keydown",keyDown);
         window.addEventListener("keyup",keyUp);
     
@@ -543,10 +546,10 @@ function keyDown(event){
         } else {
             music.play();
         }
-            musicFlag = !musicFlag
+        musicFlag = !musicFlag;
     }
     if (touche[83]){
-            soundFlag = !soundFlag
+            soundFlag = !soundFlag;
     }
     if (touche[107] && music.volume<0.9){
         music.volume += 0.1;
@@ -921,7 +924,7 @@ return () => {
     soundFlag = true;
     shootAble = true;
     game = false;
-    bullet = []
+    bullet = [];
     flyingSocer = [];
     speedBullet = 10;
     speedAlienBullet = 7;
@@ -930,10 +933,10 @@ return () => {
     scTextDisplay = [];
     alienShootBullet = [];
     ship = [];
-    stage = [];
-    music = [];
-    explode = [];
-    zap = [];
+    // stage = [];
+    // music = [];
+    // explode = [];
+    // zap = [];
     
     frameR = 60;
     frameS = 60;
