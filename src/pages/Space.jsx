@@ -12,7 +12,7 @@ let spaceShip = false;
 let shootAlien = false;
 let refresh = false;
 let pause = false;
-let musicFlag = true;
+let musicFlag = false;
 let soundFlag = true;
 let shootAble = true;
 let game = false;
@@ -29,6 +29,7 @@ let music = [];
 let explode = [];
 let zap = [];
 
+console.log("variables");
 let frameR = 60;
 let frameS = 60;
 let frame = 1/frameS;
@@ -500,7 +501,8 @@ function Space(){
         //*****************************************************************************************************//
 
         console.log("debut");
-        music.play();
+        if (!musicFlag)music.play();
+        musicFlag = true;
         window.addEventListener("keydown",keyDown);
         window.addEventListener("keyup",keyUp);
     
@@ -530,20 +532,23 @@ function keyDown(event){
     console.log(e);
     touche[e]=true;
     if (pause && touche[80]){
+        console.log("pause",pause);
         Ticker.addEventListener("tick",tickFunc);
-        music.play();
+        if(musicFlag)music.play();
     }
     if (!pause && touche[80]){
+        console.log("pause",pause);
         Ticker.removeEventListener("tick", tickFunc);
-        music.pause();
+        if(musicFlag)music.pause();
     }
     if(touche[80]){
         pause = !pause;
     }
     if (touche[77]){
-        if (musicFlag){
+        if (musicFlag && !pause){
             music.pause();
-        } else {
+        }
+        if (!musicFlag && !pause){
             music.play();
         }
         musicFlag = !musicFlag;
@@ -591,7 +596,8 @@ function alienMove(){
                 
                 if (alienDat.y > 490) {
                     // Game Over
-                    Ticker.removeEventListener("tick");
+                    // Ticker.removeEventListener("tick");
+                    Ticker.paused = true;
                     gameOver();
                 }
             })
@@ -767,7 +773,10 @@ function gameOver(){
 function reset(){
     if(game){
         console.log("reset");
-        if(musicFlag)music.play();
+        if(musicFlag){
+            music.play();
+            musicFlag = true;
+        }
         score = 0;
         level = 1;
         lives = 3;
@@ -955,6 +964,9 @@ return () => {
     scoreText=[];
     liveText=[];
     levelText=[];
+
+    window.removeEventListener("keyup",keyUp);
+    window.removeEventListener("keydown",keyDown);
 
     console.log("Nettoyage effectué : Ticker arrêté et scène nettoyée.");
   };
