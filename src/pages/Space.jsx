@@ -496,12 +496,12 @@ function Space(){
     stage.update();
 
     function start(){
-        //*****************************************************************************************************//
-        //                                  création de la flotte d'aliens                                     //
-        //*****************************************************************************************************//
+        //****************************************************************************************************//
+        //                                  création de la flotte d'aliens                                    //
+        //****************************************************************************************************//
 
         console.log("debut");
-        if (!musicFlag)music.play();
+        music.play();
         musicFlag = true;
         window.addEventListener("keydown",keyDown);
         window.addEventListener("keyup",keyUp);
@@ -518,15 +518,15 @@ function Space(){
         
         ennemiDisplay(positionInit);
     
-    //*********************************************************************************************************//
-    //                            mise en place de la routine principale de gestion                            //
-    //*********************************************************************************************************//
+    //********************************************************************************************************//
+    //                            mise en place de la routine principale de gestion                           //
+    //********************************************************************************************************//
     
         Ticker.setFPS(frameR);
         Ticker.addEventListener("tick",tickFunc);
 }
 }
-//------------------------------------------- gestion des touches ---------------------------------------------//
+//------------------------------------------- gestion des touches --------------------------------------------//
 function keyDown(event){
     let e = event.keyCode;
     console.log(e);
@@ -570,7 +570,7 @@ function keyUp(event){
     touche[e]=false;
 }
 
-//------------------------------------------- déplacements des aliens -----------------------------------------//
+//------------------------------------------- déplacements des aliens ----------------------------------------//
 
 function alienMove(){
 
@@ -608,7 +608,7 @@ function alienMove(){
     }
 }
 
-//--------------------------------------------- tir du vaisseau -----------------------------------------------//
+//--------------------------------------------- tir du vaisseau ----------------------------------------------//
 
 function shootBul(x){
     if(shootShip){
@@ -622,7 +622,7 @@ function shootBul(x){
     }
 }
 
-//-------------------------------------- déplacement du tir du vaisseau ---------------------------------------//
+//-------------------------------------- déplacement du tir du vaisseau --------------------------------------//
 
 function moveBul(){
     if(!shootShip){
@@ -634,7 +634,7 @@ function moveBul(){
     }
 }
 
-//---------------------------------------- tirs des vaisseaux aliens ------------------------------------------//
+//---------------------------------------- tirs des vaisseaux aliens -----------------------------------------//
 
 function alienShootBul(xAlien,yAlien){
     const bulletAlien = new Shape();
@@ -646,7 +646,7 @@ function alienShootBul(xAlien,yAlien){
     shootAlien = true;
 }
 
-//--------------------------------------- déplacements des tirs aliens -----------------------------------------//
+//--------------------------------------- déplacements des tirs aliens ---------------------------------------//
 
 function alienBulletMove(){
     if(shootAlien){
@@ -657,7 +657,7 @@ function alienBulletMove(){
 
 }
 
-//---------------------------------------- apparition vaisseau mère --------------------------------------------//
+//---------------------------------------- apparition vaisseau mère ------------------------------------------//
 
 function spaceShipBuild(vaisseauMereSprite){
     if (!spaceShip){
@@ -672,7 +672,7 @@ function spaceShipBuild(vaisseauMereSprite){
     }
 }
 
-//----------------------------------------- déplacement vaisseau mère ------------------------------------------//
+//----------------------------------------- déplacement vaisseau mère ----------------------------------------//
 
 function spaceShipMove(){
     if (spaceShip){
@@ -684,7 +684,7 @@ function spaceShipMove(){
     }
 }
 
-//----------------------------------- calcul colision tirs du vaisseau -----------------------------------------//
+//----------------------------------- calcul colision tirs du vaisseau ---------------------------------------//
 
 function colisions(){
     if (!shootShip){
@@ -732,7 +732,7 @@ function colisions(){
 
 }
 
-//----------------------------------------- création de la flotte alien ---------------------------------------//
+//----------------------------------------- création de la flotte alien --------------------------------------//
 
 function ennemiDisplay(positionInit){
     for(let i=0; i<positionInit.length;i++){
@@ -764,8 +764,34 @@ function textDisplay(dataText,textLine,xData){
 
 function gameOver(){
     music.pause();
-    alert("Game Over");
-    reset();
+    Ticker.removeEventListener("tick", tickFunc);
+    // alert("Game Over");
+    const gOverCont = new Container();
+    const gOverWindow = new  Shape();
+    gOverWindow.graphics.beginFill("darkgrey").drawRect(-300,-200,600,400);
+    const gOText = new Text("GAME OVER", "bold 30px Arial","red");
+    const butCont = new Container();
+    const backButText = new Shape();
+    backButText.graphics.beginFill("lightgrey").drawRect(-150,-15,300,30);
+    const butText = new Text("Nouvelle Partie","bold 20px Arial","black");
+    butCont.addChild(backButText,butText);
+    gOverCont.addChild(gOverWindow, gOText, butCont);
+    stage.addChild(gOverCont);
+    gOverCont.x = 500;
+    gOverCont.y = 275;
+    gOText.textAlign = "center";
+    gOText.y = -50;
+    butText.textAlign = "center";
+    butText.textBaseline = "middle";
+    butText.y = 50;
+    backButText.y = 50;
+    backButText.addEventListener("click",()=>{
+        gOverCont.removeAllChildren();
+        Ticker.setFPS(frameR);
+        Ticker.addEventListener("tick",tickFunc);
+        reset();
+        stage.update();
+    })
 }
 
 //------------------------------------------- remise à zero et restart ---------------------------------------//
@@ -801,8 +827,10 @@ function reset(){
         if(alienArray.length>0){
             alienArray.map((data)=>{
                 stage.removeChild(data);
+                console.log(data);
             })
-            alienArray = [];
+            alienArray=[];
+            console.log(alienArray.length,alienArray);
         }
         if(touche.length>0){
             touche.map((data,index)=>{
@@ -817,9 +845,9 @@ function reset(){
 //-------------------------------------- gestion des colisions de tirs aliens --------------------------------//
 
 function alienBulletColision(){
-    if(shootAlien && shootAble){
+    if(shootAlien){
         for(let i=0; i<alienShootBullet.length; i++){
-            if((alienShootBullet[i].x>ship.x && alienShootBullet[i].x<ship.x+46) && alienShootBullet[i].y>ship.y){
+            if((alienShootBullet[i].x>ship.x && alienShootBullet[i].x<ship.x+46) && alienShootBullet[i].y>ship.y && shootAble){
                 lives -= 1;
                 textArray[2].text="VIES:"+lives;
                 waitTime();
@@ -853,7 +881,7 @@ function alienShoot(){
     })
 }
 
-//----------------------- attente entre l'état de vaisseau touché et un pouveau vaisseau ----------------------//
+//----------------------- attente entre l'état de vaisseau touché et un pouveau vaisseau ---------------------//
 
 function waitTime(){
     shootAble = false;
@@ -865,7 +893,7 @@ function waitTime(){
     },2000);
 }
 
-//------------------------------------------ création du vaisseau ---------------------------------------------//
+//------------------------------------------ création du vaisseau --------------------------------------------//
 
 function createShip(dataX){
     const spriteSheet = new SpriteSheet(vaisseauSprite);
@@ -877,7 +905,7 @@ function createShip(dataX){
     stage.addChild(ship);
 }
 
-//--------------------------------- gestion des diverses fonctions par temporisation régulée -------------------//
+//------------------------------- gestion des diverses fonctions par temporisation régulée -------------------//
 
 function tickFunc(){
     alienMove();
@@ -915,9 +943,10 @@ return () => {
     // Arrêter le Ticker
     Ticker.removeEventListener("tick",tickFunc);
 
-    // Vider la scène et supprimer tous les éléments ajoutés
+    // Vider la scène, supprimer tous les éléments ajoutés et mise a jour des variables
     stage.removeAllChildren();
     stage.clear();
+    console.log("musique en pause");
     music.pause();
     timerA=0;
     touche=[];
