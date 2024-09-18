@@ -2,6 +2,8 @@
 @font-face {
   font-family: "roboto";
   src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+  font-family: "comic";
+  src: url(./assets/fonts/Comic_Neue/ComicNeue-Regular.ttf);
 }
 *{
   margin:0;
@@ -14,18 +16,28 @@
 .navigationList{
   display:flex;
   align-items: center;
+  font-family: "comic";
+  font-weight:900;
+  font-style: italic;
 }
 .boite{
+  padding-top:8px;
+  border: 2px solid rgb(64, 64, 235);
+  box-shadow: 4px 3px 7px rgb(70, 69, 69);
+  background-color: lightblue;
+  text-align: center;
   margin-right:10vw;
   list-style: none;
   font-size: 1.7vw;
-  font-weight: bold;
   width: 7vw;
   height: 2.5vw;
   overflow:hidden;
 }
 .boite2{
   width:8vw;
+}
+.boite3{
+  width:11vw;
 }
 .textdef{
   text-decoration: none;
@@ -41,7 +53,7 @@
 @keyframes defilement{
   /* 30%{color:white;} */
   0% {left:100%;}
-  100% {left:-78%;}
+  100% {left:-100%;}
 }
 .imageLogo{
   width:7vw;
@@ -50,7 +62,7 @@
 .logo{
   margin-top:0.5vh;
 }
-header{
+nav{
   display: flex;
   align-items: center;
   height:7.5vw;

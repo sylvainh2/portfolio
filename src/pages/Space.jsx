@@ -533,6 +533,7 @@ function keyDown(event){
     touche[e]=true;
     if (pause && touche[80]){
         console.log("pause",pause);
+        Ticker.setFPS(frameR);
         Ticker.addEventListener("tick",tickFunc);
         if(musicFlag)music.play();
     }
@@ -596,8 +597,6 @@ function alienMove(){
                 
                 if (alienDat.y > 490) {
                     // Game Over
-                    // Ticker.removeEventListener("tick");
-                    Ticker.paused = true;
                     gameOver();
                 }
             })
@@ -813,17 +812,20 @@ function reset(){
         sens = 1;
         sensFlag = false;
         shootAble = true;
+        //--------------------------- on efface les tirs des aliens ---------------------//
         if(shootAlien){
             alienShootBullet.map((data)=>{
                 stage.removeChild(data);
             })
         }
         shootAlien = false;
+        //--------------------------- on efface le tir du vaisseau ----------------------//
         if(!shootShip){
             stage.removeChild(bullet);
         }
         shootShip = true;
         alienShootBullet = [];
+        //------------------------------ on efface les aliens ---------------------------//
         if(alienArray.length>0){
             alienArray.map((data)=>{
                 stage.removeChild(data);
@@ -832,6 +834,7 @@ function reset(){
             alienArray=[];
             console.log(alienArray.length,alienArray);
         }
+        //---------------- on réinitialise le tableau des touches appuyées --------------//
         if(touche.length>0){
             touche.map((data,index)=>{
                 touche[index] = false;

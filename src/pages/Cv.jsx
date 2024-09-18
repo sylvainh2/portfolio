@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import Header from "../components/Header";
+
 function Cv() {
     return(
         <>
+            {/* <Header/> */}
             <section className="page">
                 <div className="profileColumn">
                     <img src="logo.jpg" alt="identity" width="60%" className="photoid"/>
