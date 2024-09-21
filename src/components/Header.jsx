@@ -15,10 +15,14 @@ function Header() {
                                     <div className="textdef">C.V</div>
                                 </Link>
                             </li>
-                            <li className="boite boite2">
-                                <Link to={"/space"} className="lientextdef" href="#">
+                            <li className="boite1">
+                                <div to={"/space"} className="lientextdef boite boite2" href="#">
                                     <div className="textdef">Projets</div>
-                                </Link>
+                                </div>
+                                <div className="mText">
+                                    <Link to={"/space"} className="menuText">space invaders</Link>
+                                    <div className="menuText">autre</div>
+                                </div>
                             </li>
                             <li className="boite boite3">
                                 <a className="textdef" href="#">Me contacter</a>

@@ -50,6 +50,30 @@
 .boite:hover .textdef{
   animation:linear defilement 1.2s infinite;
 }
+.boite1{
+  list-style: none;
+  position:relative;
+}
+.mText{
+  display:none;
+}
+.boite1:hover .mText{
+  display:block;
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+  width:14em;
+}
+.boite1:hover .textdef{
+  animation:linear defilement 1.2s infinite;
+}
+.boite1:hover .menuText{
+  display:block;
+  font-size: 1.5rem;
+  background-color: lightgrey;
+  text-decoration: none;
+  color:black;
+}
 @keyframes defilement{
   /* 30%{color:white;} */
   0% {left:100%;}
