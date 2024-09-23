@@ -74,6 +74,9 @@
   text-decoration: none;
   color:black;
 }
+.boite1 .mt:hover{
+  background-color: rgb(242, 167, 167);
+}
 @keyframes defilement{
   /* 30%{color:white;} */
   0% {left:100%;}
@@ -90,7 +93,7 @@ nav{
   display: flex;
   align-items: center;
   height:7.5vw;
-  background: linear-gradient(to right,rgba(21,165,239,1), rgba(183,226,253,1));
+  background: linear-gradient(to right,rgb(43, 111, 116), rgba(183,226,253,1));
   justify-content: space-between;
 }
 .imageLogo:hover{
@@ -286,4 +289,34 @@ canvas{
   color:white;
   text-transform: uppercase;
   margin: 2vh;
+}
+/**************************************************************************************************/
+/*                                              Contact                                            /
+/**************************************************************************************************/
+
+.mail{
+  background-color: grey;
+  margin:0rem auto;
+  width: 60%;
+}
+.mailForm{
+  margin:3rem auto;
+  display:flex;
+  flex-direction: column;
+  width:90%;
+}
+.inputMail{
+  margin-top:1rem;
+  font-size:1.2vw;
+}
+.mailBtn{
+  margin:1rem auto;
+  display:block;
+  padding:0.2rem 0.5rem 0.2rem 0.5rem;
+}
+.mailEffect{
+  box-shadow: 2px 2px 3px rgb(58, 58, 58);
+}
+.areaEffect{
+  resize:none;
 }

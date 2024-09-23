@@ -5,9 +5,9 @@ function Header() {
         <>
             <header>
                 <nav>
-                    <div className="logo">
+                    <Link to={"/"} className="logo">
                         <img className="imageLogo" src="logo.jpg" alt="logo" />
-                    </div>
+                    </Link>
                     <div className="navigation">
                         <ul className="navigationList">
                             <li className="boite">
@@ -16,16 +16,16 @@ function Header() {
                                 </Link>
                             </li>
                             <li className="boite1">
-                                <div to={"/space"} className="lientextdef boite boite2" href="#">
+                                <div className="lientextdef boite boite2" href="#">
                                     <div className="textdef">Projets</div>
                                 </div>
                                 <div className="mText">
-                                    <Link to={"/space"} className="menuText">space invaders</Link>
-                                    <div className="menuText">autre</div>
+                                    <Link to={"/space"} className="menuText mt">space invaders</Link>
+                                    <div className="menuText mt">autre</div>
                                 </div>
                             </li>
                             <li className="boite boite3">
-                                <a className="textdef" href="#">Me contacter</a>
+                                <Link to={"/mail"} className="textdef" href="#">Me contacter</Link>
                             </li>
                         </ul>
                     </div>
