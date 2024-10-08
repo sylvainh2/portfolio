@@ -25,7 +25,9 @@ function Header() {
                                 </div>
                             </li>
                             <li className="boite boite3">
-                                <Link to={"/mail"} className="textdef" href="#">Me contacter</Link>
+                                <Link to={"/mail"} className="lientextdef" href="#">
+                                    <div className="textdef">Me contacter</div>
+                                </Link>
                             </li>
                         </ul>
                     </div>
