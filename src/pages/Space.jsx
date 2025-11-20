@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useRef, useEffect } from 'react';
 import { Stage, Ticker, Shape, SpriteSheet, Sprite, Container, Text } from 'createjs-module';
+import ReturnB from '../components/ReturnB';
 
 let timerA=0;
 let touche=[];
@@ -423,7 +424,6 @@ const positionInit=[
 
 function Space(){
 
-    console.log("on passe");
     const demoCanvas = useRef(null);
     const musique = useRef(null);
     const explosion = useRef(null);
@@ -431,7 +431,6 @@ function Space(){
     useEffect(()=>{
     const myCanvas = demoCanvas.current;
     if(myCanvas){
-    console.log(myCanvas);
     stage = new Stage(myCanvas);
 
     music = musique.current;
@@ -884,7 +883,7 @@ function alienShoot(){
     })
 }
 
-//----------------------- attente entre l'état de vaisseau touché et un pouveau vaisseau ---------------------//
+//----------------------- attente entre l'état de vaisseau touché et un nouveau vaisseau ---------------------//
 
 function waitTime(){
     shootAble = false;
@@ -1013,9 +1012,7 @@ return () => {
                 Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
                 </canvas>
             </div>
-            <section className='retour'>
-                <Link to={"/"} className="retourButton" href="#">Retour</Link>
-            </section>
+            <ReturnB />
             <audio loop ref={musique} src="/sound/reflex-193612.mp3" type="audio/mpeg"></audio>
             <audio ref={explosion} src="/sound/explosion-91872.mp3" type="audio/mpeg"></audio>
             <audio ref={tir} src="/sound/shoot.wav" type="audio/wav"></audio>

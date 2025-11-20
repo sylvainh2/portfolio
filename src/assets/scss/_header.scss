@@ -1,0 +1,100 @@
+/**************************************************************************************************/
+/*                                              Home                                              */
+/**************************************************************************************************/
+
+.navigationList{
+  display:flex;
+  align-items: center;
+  font-family: "comic";
+  font-weight:900;
+  font-style: italic;
+}
+.boite{
+  padding-top:8px;
+  border: 2px solid rgb(64, 64, 235);
+  box-shadow: 4px 3px 7px rgb(70, 69, 69);
+  background-color: lightblue;
+  text-align: center;
+  margin-right:10vw;
+  list-style: none;
+  font-size: 1.7vw;
+  width: 7vw;
+  height: 2.5vw;
+  overflow:hidden;
+}
+.boite2{
+  width:8vw;
+}
+.boite3{
+  width:11vw;
+}
+.textdef{
+  text-decoration: none;
+  color:black;
+  position: relative;
+}
+.lientextdef{
+  text-decoration: none;
+}
+.boite:hover .textdef{
+  animation:linear defilement 1.2s infinite;
+}
+.boite1{
+  list-style: none;
+  position:relative;
+}
+.mText{
+  display:none;
+}
+.boite1:hover .mText{
+  display:block;
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+  width:14vw;
+}
+.boite1:hover .textdef{
+  animation:linear defilement 1.2s infinite;
+}
+.boite1:hover .menuText{
+  display:block;
+  font-size: 1.5vw;
+  background-color: lightgrey;
+  text-decoration: none;
+  color:black;
+}
+.boite1 .mt:hover{
+  background-color: rgb(242, 167, 167);
+}
+@keyframes defilement{
+  /* 30%{color:white;} */
+  0% {left:100%;}
+  100% {left:-100%;}
+}
+.imageLogo{
+  width:7vw;
+  margin-left:2vw;
+}
+.logo{
+  margin-top:0.5vh;
+}
+nav{
+  display: flex;
+  align-items: center;
+  height:7.5vw;
+  background: linear-gradient(to right,rgb(43, 111, 116), rgba(183,226,253,1));
+  justify-content: space-between;
+}
+.imageLogo:hover{
+  animation: rotateAnim 0.4s infinite;
+}
+@keyframes rotateAnim {
+  from {transform: rotate(0);}
+  to {transform: rotate(360deg);}
+}
+body{
+  background-image: url(../images/concept-collage-html-css.jpg);
+  width:100%;
+  background-size:cover;
+  background-repeat: no-repeat;
+}

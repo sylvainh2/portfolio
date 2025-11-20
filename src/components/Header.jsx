@@ -10,10 +10,14 @@ function Header() {
                     </Link>
                     <div className="navigation">
                         <ul className="navigationList">
-                            <li className="boite">
-                                <Link to={"/cv"} className="lientextdef" href="#">
+                            <li className="boite1">
+                                <div className="lientextdef boite boite2">
                                     <div className="textdef">C.V</div>
-                                </Link>
+                                </div>
+                                <div className="mText">
+                                    <Link to={"/cvnew"} className="menuText mt">C.V</Link>
+                                    <Link to={"/cv"} className="menuText mt">C.V ancien HTML</Link>
+                                </div>
                             </li>
                             <li className="boite1">
                                 <div className="lientextdef boite boite2" href="#">
@@ -21,6 +25,8 @@ function Header() {
                                 </div>
                                 <div className="mText">
                                     <Link to={"/space"} className="menuText mt">space invaders</Link>
+                                    <Link to={"/morpion"} className="menuText mt">morpion</Link>
+                                    <Link to={"/memory"} className="menuText mt">memory</Link>
                                     <div className="menuText mt">autre</div>
                                 </div>
                             </li>

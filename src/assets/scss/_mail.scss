@@ -1,0 +1,47 @@
+/**************************************************************************************************/
+/*                                              Contact                                            /
+/**************************************************************************************************/
+
+.mail{
+  position:relative;
+  background-color: grey;
+  margin:0rem auto;
+  width: 60%;
+}
+.mailForm{
+  margin:3rem auto;
+  display:flex;
+  flex-direction: column;
+  width:90%;
+}
+.inputMail{
+  margin-top:1rem;
+  font-size:1.2vw;
+}
+.mailBtn{
+  margin:1rem auto;
+  display:block;
+  padding:0.2rem 0.5rem 0.2rem 0.5rem;
+}
+.mailEffect{
+  box-shadow: 2px 2px 3px rgb(58, 58, 58);
+}
+.areaEffect{
+  resize:none;
+}
+.wHidden{
+  display:none;
+}
+.sendWindow{
+  z-index: 1;
+  background-color: red;
+  color: white;
+  font-size:1.2vw;
+  padding: 1vw 2vh;
+  transform: translate(-50%,-50%);
+}
+.absCont{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+}

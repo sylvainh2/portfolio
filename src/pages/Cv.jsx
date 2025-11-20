@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import Header from "../components/Header";
+import ReturnB from "../components/ReturnB"
 
 function Cv() {
     return(
@@ -61,7 +60,7 @@ function Cv() {
                         <article className='articleExp'>
                             <div className="boxExperience exp">
                                 <div className="yearBox ybEffect">
-                                    <p className='ybPara'>10/09/2022</p>
+                                    <p className='ybPara'>2023</p>
                                     <p>Aujourd'hui</p>
                                     <p>(Saint jean d'illac)</p>
                                 </div>
@@ -115,9 +114,7 @@ function Cv() {
                     </div>
                 </div>
             </section>
-            <section className="retour">
-                <Link to={"/"} className='retourButton' href="#">RETOUR</Link>
-            </section>
+            <ReturnB />
         </>
     )
 }
