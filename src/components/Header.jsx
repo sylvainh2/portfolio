@@ -27,7 +27,7 @@ function Header() {
                                     <Link to={"/space"} className="menuText mt">space invaders</Link>
                                     <Link to={"/morpion"} className="menuText mt">morpion</Link>
                                     <Link to={"/memory"} className="menuText mt">memory</Link>
-                                    <div className="menuText mt">autre</div>
+                                    <a href="#asi" className="menuText mt">club run'illac</a>
                                 </div>
                             </li>
                             <li className="boite boite3">

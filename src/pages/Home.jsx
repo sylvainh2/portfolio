@@ -40,10 +40,24 @@ function Home() {
                     <img src="./images/memoryscreen.png" alt="memory" width="200px" height="120px"></img>
                 </div>
                 <div className="cvHomeSection">
+                    <div className="kataHomeContainer">
+                        <a href="https://github.com/sylvainh2/kata" target="_blank" className="titleHome">Kata</a>
+                    </div>
+                    <p className="homePara">Lien du Github contenant une dizaine d'exercices niveau débutant et des katas de tous niveaux</p>
+                    <a href="https://github.com/sylvainh2/kata" target="_blank" className="kataPara">https://github.com/sylvainh2/kata</a>
+                </div>
+                <div id="asi" className="cvHomeSection">
                     <div className="runHomeContainer">
-                        <Link to="/Space" className="titleHome">Projet Run'illac</Link>
+                        <Link to="/" className="titleHome">Projet Run'illac</Link>
                     </div>
                     <p className="homePara">Site internet de présentation, publication, et gestion du club de course à pied de Saint Jean d'illac en JS/React.js/SCSS/Node.js/Express</p>
+                    <div className="screenHomeContainer">
+                        <img src="./images/asi1.png" alt="image asi1" width="200px"/>
+                        <img src="./images/asi2.png" alt="image asi2" width="200px"/>
+                        <img src="./images/asi3.png" alt="image asi3" width="200px" height="200px"/>
+                        <img src="./images/asi4.png" alt="image asi4" width="200px" height="200px"/>
+                        <img src="./images/asi5.png" alt="image asi5" width="200px"/>
+                    </div>
                 </div>
             </section>
         </>

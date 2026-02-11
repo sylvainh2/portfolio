@@ -1,4 +1,7 @@
-.cvHomeSection{
+
+/**************************************************************************************************/
+/*                                            Home                                                */
+/**************************************************************************************************/.cvHomeSection{
     margin:3rem 0 3rem 4rem;
     color:white;
 }
@@ -8,6 +11,9 @@
     text-decoration: none;
     color: white;
     text-align: center;
+}
+.titleHome:hover{
+  background-color: rgb(242, 167, 167);
 }
 .cvnewHomeContainer{
     width:64px;
@@ -55,4 +61,19 @@
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
+}
+.kataHomeContainer{
+    width:96px;
+    height:32px;
+    transform: skewX(-15deg);
+    background-color: grey;
+    margin-bottom: 1rem;
+}
+.kataPara{
+    text-decoration: none;
+    color:white;
+}
+.screenHomeContainer{
+    display:flex;
+    gap:20px;
 }
