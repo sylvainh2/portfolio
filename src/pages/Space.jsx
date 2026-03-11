@@ -29,6 +29,7 @@ let stage = [];
 let music = [];
 let explode = [];
 let zap = [];
+const site = "/portfolio";
 
 console.log("variables");
 let frameR = 60;
@@ -50,7 +51,7 @@ let liveText=[];
 let levelText=[];
 
 let alien1Sprite = {
-    images:["/alien1.png"],
+    images:[site+"/alien1.png"],
     frames:{width:60,height:45,regx:-30,regy:45},
     animations:{
         run:[0,1,"run",frame*2],
@@ -60,28 +61,28 @@ let alien1Sprite = {
 
 };
 let alien2Sprite = {
-    images:["/alien2.png"],
+    images:[site+"/alien2.png"],
     frames:{width:60,height:45,count:2,regx:-30,regy:45},
     animations:{
         run:[0,1,"run",frame*2]
     }
 };
 let alien3Sprite = {
-    images:["/alien3.png"],
+    images:[site+"/alien3.png"],
     frames:{width:60,height:45,count:2,regx:-30,regy:45},
     animations:{
         run:[0,1,"run",frame*2]
     }
 };
 let vaisseauSprite = {
-    images:["/vaisseau.png"],
+    images:[site+"/vaisseau.png"],
     frames:{width:60,height:35,regx:-30,regy:0},
     animations:{
         stand:0
     }
 };
 let vaisseauMereSprite = {
-    images:["/vaisseaumere.png"],
+    images:[site+"/vaisseaumere.png"],
     frames:{width:80,height:40,regx:-40,regy:40},
     animations:{
         stand:0
@@ -1013,9 +1014,9 @@ return () => {
                 </canvas>
             </div>
             <ReturnB />
-            <audio loop ref={musique} src="/sound/reflex-193612.mp3" type="audio/mpeg"></audio>
-            <audio ref={explosion} src="/sound/explosion-91872.mp3" type="audio/mpeg"></audio>
-            <audio ref={tir} src="/sound/shoot.wav" type="audio/wav"></audio>
+            <audio loop ref={musique} src="/portfolio/sound/reflex-193612.mp3" type="audio/mpeg"></audio>
+            <audio ref={explosion} src="/portfolio/sound/explosion-91872.mp3" type="audio/mpeg"></audio>
+            <audio ref={tir} src="/portfolio/sound/shoot.wav" type="audio/wav"></audio>
         </>
     )
 }
