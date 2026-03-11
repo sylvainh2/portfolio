@@ -6,7 +6,7 @@ function Header() {
             <header>
                 <nav>
                     <Link to={"/"} className="logo">
-                        <img className="imageLogo" src="logo.jpg" alt="logo" />
+                        <img className="imageLogo" src="/portfolio/logo.jpg" alt="logo" />
                     </Link>
                     <div className="navigation">
                         <ul className="navigationList">
