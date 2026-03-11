@@ -12,7 +12,7 @@ import Mail from './pages/Mail';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio">
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/cv" element={<Cv />}/>
