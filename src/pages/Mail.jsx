@@ -33,14 +33,14 @@ function Mail(){
         {/* <Header /> */}
         <main className="mail">
             <div className="sendWindow absCont wHidden">Message Envoyé</div>
-            <form className="mailForm" onSubmit={handleSubmitJoin}>
+            <form className="mailForm">
                 <label className="inputMail">email:</label>
                 <input className="inputMail mailEffect email" type="email" name="email" placeholder="Entrez votre Email svp"/>
                 <label className="inputMail">sujet</label>
                 <input className="inputMail mailEffect sujet" type="text" name="sujet"/>
                 <label className="inputMail">message:</label>
                 <textarea className="inputMail mailEffect areaEffect message" type="text" cols="50" rows="10" name="message" />
-                <button className="mailBtn inputMail">Envoyer</button>
+                <button className="mailBtn inputMail">Non supporté sur github pages</button>
             </form>
         </main>
         <ReturnB />
