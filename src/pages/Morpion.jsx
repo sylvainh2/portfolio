@@ -31,7 +31,6 @@ function Morpion() {
         document.querySelectorAll('.square').forEach((data)=>data.textContent="");
         document.querySelector('.player').removeEventListener("click",reloadParty);
     }
-    reloadParty();
     useEffect(()=>{
         document.querySelectorAll('.square').forEach((data)=>data.addEventListener("click",morpionPlay));
         document.querySelector('.retour').className="retour morpionRet";
