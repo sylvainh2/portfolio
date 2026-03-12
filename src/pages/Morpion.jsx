@@ -29,7 +29,9 @@ function Morpion() {
         res3=false;
         player="X";
         document.querySelectorAll('.square').forEach((data)=>data.textContent="");
-        document.querySelector('.player').removeEventListener("click",reloadParty);
+        document.querySelector(".player").textContent="Le joueur X doit jouer";
+        document.querySelector(".player").style.backgroundColor = "transparent";
+        document.querySelector(".player").removeEventListener("click",reloadParty);
     }
     useEffect(()=>{
         document.querySelectorAll('.square').forEach((data)=>data.addEventListener("click",morpionPlay));
@@ -74,11 +76,16 @@ function Morpion() {
     //********************************************************************************************************************/
     function result(data){
         if(data==""){
-            document.querySelector(".player").textContent="Egalité!! cliquez pour redémarrer une partie";
+            document.querySelector(".player").textContent="Egalité!! cliquez ici pour redémarrer une partie";
         }else{
-            document.querySelector(".player").textContent="Le joueur "+data+" a gagné!! cliquez pour redémarrer une partie";
+            document.querySelector(".player").textContent="Le joueur "+data+" a gagné!! cliquez ici pour redémarrer une partie";
         }
-        const reload = document.querySelector(".player").addEventListener("click",reloadParty);
+        const messagePlayer = document.querySelector(".player");
+        messagePlayer.addEventListener("click",reloadParty);
+        messagePlayer.style.display = "inline-block";
+        // messagePlayer.style.width = "50%";
+        messagePlayer.style.backgroundColor = "blue";
+        messagePlayer.style.cursor = "pointer";
     }
     //*******************************************************************************************************************/
     //                                fonction de comparaison avec les solutions gagnantes                               /
@@ -104,24 +111,24 @@ function Morpion() {
     return(
     <section className="morpionBody">
         <div className="morpionContainer">
-        <div className="square s0">
-        </div>
-        <div className="square s1">
-        </div>
-        <div className="square s2">
-        </div>
-        <div className="square s3">
-        </div>
-        <div className="square s4">
-        </div>
-        <div className="square s5">
-        </div>
-        <div className="square s6">
-        </div>
-        <div className="square s7">
-        </div>
-        <div className="square s8">
-        </div>
+            <div className="square s0">
+            </div>
+            <div className="square s1">
+            </div>
+            <div className="square s2">
+            </div>
+            <div className="square s3">
+            </div>
+            <div className="square s4">
+            </div>
+            <div className="square s5">
+            </div>
+            <div className="square s6">
+            </div>
+            <div className="square s7">
+            </div>
+            <div className="square s8">
+            </div>
         </div>
         <p className="player">Le joueur X doit jouer</p>
         <ReturnB />
