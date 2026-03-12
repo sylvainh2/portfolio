@@ -23,21 +23,21 @@ function Home() {
                         <Link to="/Space" className="titleHome">Space invaders</Link>
                     </div>
                     <p className="homePara">Adaptation libre du jeu space invaders en JS/React.js/CreateJs</p>
-                    <img src="./portfolio/images/spacescreen.png" alt="space invaders" width="200px" height="120px"></img>
+                    <img src="/portfolio/images/spacescreen.png" alt="space invaders" width="200px" height="120px"></img>
                 </div>
                 <div className="cvHomeSection">
                     <div className="morpionHomeContainer">
                         <Link to="/Morpion" className="titleHome">Morpion</Link>
                     </div>
                     <p className="homePara">Adaptation du jeu du morpion dont le but est d'aligner 3 pions en JS/React.js/SCSS</p>
-                    <img src="./portfolio/images/morpionscreen.png" alt="morpion" width="200px" height="120px"></img>
+                    <img src="/portfolio/images/morpionscreen.png" alt="morpion" width="200px" height="120px"></img>
                 </div>
                 <div className="cvHomeSection">
                     <div className="memoryHomeContainer">
                         <Link to="/Memory" className="titleHome">Memory</Link>
                     </div>
                     <p className="homePara">Adaptation du jeu memory dont le but est de retrouver des paires de cartes identiques en JS/React.js/SCSS</p>
-                    <img src="./portfolio/images/memoryscreen.png" alt="memory" width="200px" height="120px"></img>
+                    <img src="/portfolio/images/memoryscreen.png" alt="memory" width="200px" height="120px"></img>
                 </div>
                 <div className="cvHomeSection">
                     <div className="kataHomeContainer">
@@ -52,11 +52,11 @@ function Home() {
                     </div>
                     <p className="homePara">Site internet de présentation, publication, et gestion du club de course à pied de Saint Jean d'illac en JS/React.js/SCSS/Node.js/Express</p>
                     <div className="screenHomeContainer">
-                        <img src="./portfolio/images/asi1.png" alt="image asi1" width="200px"/>
-                        <img src="./portfolio/images/asi2.png" alt="image asi2" width="200px"/>
-                        <img src="./portfolio/images/asi3.png" alt="image asi3" width="200px" height="200px"/>
-                        <img src="./portfolio/images/asi4.png" alt="image asi4" width="200px" height="200px"/>
-                        <img src="./portfolio/images/asi5.png" alt="image asi5" width="200px"/>
+                        <img src="/portfolio/images/asi1.png" alt="image asi1" width="200px"/>
+                        <img src="/portfolio/images/asi2.png" alt="image asi2" width="200px"/>
+                        <img src="/portfolio/images/asi3.png" alt="image asi3" width="200px" height="200px"/>
+                        <img src="/portfolio/images/asi4.png" alt="image asi4" width="200px" height="200px"/>
+                        <img src="/portfolio/images/asi5.png" alt="image asi5" width="200px"/>
                     </div>
                 </div>
             </section>

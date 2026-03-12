@@ -18,6 +18,18 @@ function Morpion() {
     let arr=[];
     let res1,res2,res3=false;
     let player="X";
+    function reloadParty(){
+        playedSquares=[0,0,0,0,0,0,0,0,0];
+        compt=0;
+        xcomb=[];
+        ycomb=[];
+        arr=[];
+        res1,res2,res3=false;
+        player="X";
+        document.querySelectorAll('.square').forEach((data)=>data.textContent="");
+        document.querySelector('.player').removeEventListener("click",reloadParty);
+    }
+    reloadParty();
     useEffect(()=>{
         document.querySelectorAll('.square').forEach((data)=>data.addEventListener("click",morpionPlay));
         document.querySelector('.retour').className="retour morpionRet";
@@ -61,10 +73,11 @@ function Morpion() {
     //********************************************************************************************************************/
     function result(data){
         if(data==""){
-            document.querySelector(".player").textContent="Egalité!! F5 pour redémarrer une partie";
+            document.querySelector(".player").textContent="Egalité!! cliquez pour redémarrer une partie";
         }else{
-            document.querySelector(".player").textContent="Le joueur "+data+" a gagné!! F5 pour redémarrer une partie";
+            document.querySelector(".player").textContent="Le joueur "+data+" a gagné!! cliquez pour redémarrer une partie";
         }
+        const reload = document.querySelector(".player").addEventListener("click",reloadParty);
     }
     //*******************************************************************************************************************/
     //                                fonction de comparaison avec les solutions gagnantes                               /
