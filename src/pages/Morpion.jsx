@@ -24,7 +24,9 @@ function Morpion() {
         xcomb=[];
         ycomb=[];
         arr=[];
-        res1,res2,res3=false;
+        res1=false;
+        res2=false;
+        res3=false;
         player="X";
         document.querySelectorAll('.square').forEach((data)=>data.textContent="");
         document.querySelector('.player').removeEventListener("click",reloadParty);
