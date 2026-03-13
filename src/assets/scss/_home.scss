@@ -34,6 +34,17 @@
     background-color: grey;
     margin-bottom: 1rem;
 }
+.cvHomeSection{
+    border-bottom: 1px solid rgb(21,21,21);
+    border-right:1px solid rgb(21,21,21);
+    // border-radius: 15px;
+    width:90%;
+    box-shadow: 3px 3px 5px rgb(21,21,21);
+    backdrop-filter: blur(7px) hue-rotate(7deg);
+}
+.cvHomeSection img{
+    margin-bottom: 1rem;
+}
 .spaceHomeContainer{
     width:160px;
     height:32px;
