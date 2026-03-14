@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
 function Home() {
+    window.scrollTo(0,0);
     return (
         <>
             <Header/>

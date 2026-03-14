@@ -1,7 +1,8 @@
 
 /**************************************************************************************************/
 /*                                            Home                                                */
-/**************************************************************************************************/.cvHomeSection{
+/**************************************************************************************************/
+.cvHomeSection{
     margin:3rem 0 3rem 4rem;
     color:white;
 }
@@ -16,8 +17,8 @@
   background-color: rgb(242, 167, 167);
 }
 .cvnewHomeContainer{
-    width:64px;
-    height:32px;
+    width:4rem;
+    height:2rem;
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
@@ -28,8 +29,8 @@
     // background-color: rgba(252, 147, 147, 0.7);
 }
 .cvHomeContainer{
-    width:320px;
-    height:32px;
+    width:20rem;
+    height:2rem;
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
@@ -37,7 +38,6 @@
 .cvHomeSection{
     border-bottom: 1px solid rgb(21,21,21);
     border-right:1px solid rgb(21,21,21);
-    // border-radius: 15px;
     width:90%;
     box-shadow: 3px 3px 5px rgb(21,21,21);
     backdrop-filter: blur(7px) hue-rotate(7deg);
@@ -46,36 +46,36 @@
     margin-bottom: 1rem;
 }
 .spaceHomeContainer{
-    width:160px;
-    height:32px;
+    width:10rem;
+    height:2rem;
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
 }
 .morpionHomeContainer{
-    width:96px;
-    height:32px;
+    width:6rem;
+    height:2rem;
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
 }
 .memoryHomeContainer{
-    width:96px;
-    height:32px;
+    width:6rem;
+    height:2rem;
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
 }
 .runHomeContainer{
-    width:160px;
-    height:32px;
+    width:10rem;
+    height:2rem;
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
 }
 .kataHomeContainer{
-    width:96px;
-    height:32px;
+    width:6rem;
+    height:2rem;
     transform: skewX(-15deg);
     background-color: grey;
     margin-bottom: 1rem;
@@ -86,5 +86,5 @@
 }
 .screenHomeContainer{
     display:flex;
-    gap:20px;
+    gap:1.25rem;
 }
