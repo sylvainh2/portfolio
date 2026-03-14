@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.eb48a428.css",
-    "main.js": "/portfolio/static/js/main.5fd14c9c.js",
+    "main.css": "/portfolio/static/css/main.1df8e938.css",
+    "main.js": "/portfolio/static/js/main.dee0371a.js",
     "static/media/concept-collage-html-css.jpg": "/portfolio/static/media/concept-collage-html-css.f04dcaf45f4824cb9a1d.jpg",
     "static/media/Roboto-Regular.ttf": "/portfolio/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
     "static/media/ComicNeue-Regular.ttf": "/portfolio/static/media/ComicNeue-Regular.f6e8f457de11c548d697.ttf",
     "index.html": "/portfolio/index.html",
-    "main.eb48a428.css.map": "/portfolio/static/css/main.eb48a428.css.map",
-    "main.5fd14c9c.js.map": "/portfolio/static/js/main.5fd14c9c.js.map"
+    "main.1df8e938.css.map": "/portfolio/static/css/main.1df8e938.css.map",
+    "main.dee0371a.js.map": "/portfolio/static/js/main.dee0371a.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb48a428.css",
-    "static/js/main.5fd14c9c.js"
+    "static/css/main.1df8e938.css",
+    "static/js/main.dee0371a.js"
   ]
 }
