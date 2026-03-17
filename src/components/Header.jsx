@@ -1,16 +1,32 @@
 import { Link } from "react-router-dom";
+import {useState, useEffect} from "react";
+
 
 function Header() {
+    
+    const [barNone, setBarNone] = useState("");
+    useEffect(()=>{
+        
+    },[barNone])
+    function barToggle(e){
+        e.preventDefault();
+        console.log("menu");
+        if(barNone){
+            setBarNone ("");
+        } else {
+            setBarNone (" barNone");
+        }
+    }
     return (
         <>
             <header>
                 <nav>
-                    <Link to={"/"} className="logo">
+                    <Link to={"/"} className="logo b1">
                         <img className="imageLogo" src="/portfolio/logo.jpg" alt="logo" />
                     </Link>
-                    <div className="navigation">
+                    <div className="navigation b2">
                         <ul className="navigationList">
-                            <li className="boite1">
+                            <li className={"boite1"+barNone}>
                                 <div className="lientextdef boite boite2">
                                     <div className="textdef">C.V</div>
                                 </div>
@@ -19,7 +35,7 @@ function Header() {
                                     <Link to={"/cv"} className="menuText mt">C.V ancien HTML</Link>
                                 </div>
                             </li>
-                            <li className="boite1">
+                            <li className={"boite1"+barNone}>
                                 <div className="lientextdef boite boite2" href="#">
                                     <div className="textdef">Projets</div>
                                 </div>
@@ -30,13 +46,14 @@ function Header() {
                                     <a href="#asi" className="menuText mt">club run'illac</a>
                                 </div>
                             </li>
-                            <li className="boite boite3">
+                            <li className={"boite boite3"+barNone}>
                                 <Link to={"/mail"} className="lientextdef" href="#">
                                     <div className="textdef">Me contacter</div>
                                 </Link>
                             </li>
                         </ul>
                     </div>
+                    <i className="fa-solid fa-bars barMenu b3" onClick={(event)=>barToggle(event)}></i>
                 </nav>
             </header>
         </>

@@ -47,7 +47,7 @@
   display:none;
 }
 .boite1:hover .mText{
-  display:block;
+  // display:block;
   display:flex;
   flex-direction: column;
   position:absolute;
@@ -73,18 +73,18 @@
   100% {left:-100%;}
 }
 .imageLogo{
-  width:7vw;
-  margin-left:2vw;
+  width:6rem;
+  margin-left:1rem;
 }
 .logo{
   margin-top:0.5vh;
 }
 nav{
   display: flex;
-  align-items: center;
-  height:7.5vw;
-  background: linear-gradient(to right,rgb(43, 111, 116), rgba(183,226,253,1));
   justify-content: space-between;
+  align-items: center;
+  min-height:7.5rem;
+  background: linear-gradient(to right,rgb(43, 111, 116), rgba(183,226,253,1));
 }
 .imageLogo:hover{
   animation: rotateAnim 0.4s infinite;
@@ -98,4 +98,87 @@ body{
   width:100%;
   background-size:cover;
   background-repeat: no-repeat;
+}
+.barMenu{
+  display:none;
+}
+@media screen and (orientation:portrait), screen and (max-width:1250px) {
+  nav{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .b1{
+    grid-row: 1;
+    grid-column:1;
+  }
+  .b2{
+    grid-row:2;
+    grid-column: 1;
+  }
+  .b3{
+    grid-row:1;
+    grid-column: 2;
+  }
+  .navigationList{
+    display:block;
+    margin-left:1rem;
+  }
+  .boite2{
+    height:1.25rem;
+    width:auto;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  .boite3{
+    height:1.25rem;
+    width:auto;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  .textdef{
+    font-size: 1rem;
+  }
+  .mText{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  .menuText{
+    text-decoration: none;
+    color:black;
+  }
+  .barMenu{
+    display:block;
+    font-size: 1.25rem;
+    border:2px solid black;
+    border-radius:5px;
+    padding:0.25rem 0.5rem;
+    margin-right: 1rem;
+  }
+  .barNone{
+    display:none;
+  }
+  .imageLogo:hover{
+    animation:none;
+  }
+  .boite1:hover .textdef{
+    animation:none;
+  }
+  .boite:hover .textdef{
+    animation:none;
+  }
+  .boite1:hover{
+    margin-bottom: 0.5rem;
+  }
+  .boite1:hover .mText{
+    all:unset;
+    margin-bottom: 0.5rem;
+  }
+  .boite1:hover .mt{
+    all:unset;
+    display:flex;
+    flex-direction: column;
+    cursor:pointer;
+  }
 }

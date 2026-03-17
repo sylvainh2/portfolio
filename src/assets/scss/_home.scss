@@ -86,5 +86,26 @@
 }
 .screenHomeContainer{
     display:flex;
+    flex-wrap:wrap;
     gap:1.25rem;
+}
+@media screen and (max-width:768px) {
+    .titleHome{
+        // font-size:1rem;
+        text-align: left;
+    }
+    .cvnewHomeContainer{
+        height:1.5rem;
+    }
+    .homePara{
+        font-size: 1rem;
+    }
+    .cvHomeSection{
+    margin:3rem 0 3rem 1rem;
+    }
+    .screenHomeContainer{
+    display:flex-wrap;
+    flex-direction: column;
+    gap:1.25rem;
+}
 }
