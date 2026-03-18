@@ -5,12 +5,8 @@ import {useState, useEffect} from "react";
 function Header() {
     
     const [barNone, setBarNone] = useState("");
-    useEffect(()=>{
-        
-    },[barNone])
     function barToggle(e){
         e.preventDefault();
-        console.log("menu");
         if(barNone){
             setBarNone ("");
         } else {
