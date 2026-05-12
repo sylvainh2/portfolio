@@ -1,10 +1,12 @@
 import Header from '../components/Header';
 import ReturnB from '../components/ReturnB';
 import emailjs from "@emailjs/browser";
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 function Mail(){
     const form = useRef();
+    const [ wSent, setWSent ] = useState (false);
+    const [ wSentError, setWSentError] = useState ("");
     const handleSubmitJoin = (event)=>{
         event.preventDefault();
         const serviceID = 'default_service';
@@ -24,16 +26,20 @@ function Mail(){
             )
             .then(
                 () => {
-                document.querySelector(".sendWindow").setAttribute("class","sendWindow absCont");
-                setTimeout(()=>{
-                    document.querySelector(".sendWindow").setAttribute("class","sendWindow absCont wHidden");
-                },3000);
+                    setWSent (true);
+                    document.querySelector(".mailForm").reset();
+                    setTimeout(()=>{
+                        setWSent (false);
+                    },3000);
                 },
                 (error) => {
+                    setWSentError (error.text);
+                    setTimeout(()=>{
+                        setWSentError ("")
+                    },5000);
                 console.log(error.text);
                 }
             );
-            document.querySelector(".mailForm").reset();
         }
     };
 
@@ -41,7 +47,8 @@ function Mail(){
     <>
         {/* <Header /> */}
         <main className="mail">
-            <div className="sendWindow absCont wHidden">Message Envoyé</div>
+            {wSent && <div className="sendWindow absCont">Message Envoyé</div>}
+            {wSentError && <div className="sendWindow absCont">Erreur d'envoi:{wSentError}</div>}
             <form ref={form} className="mailForm" onSubmit={handleSubmitJoin}>
                 <label className="inputMail">email:</label>
                 <input className="inputMail mailEffect email" type="email" name="email" placeholder="Entrez votre Email svp"/>
