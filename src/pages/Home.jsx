@@ -251,7 +251,7 @@ const Home = ()=> {
                     <p>Un ancien CV entièrement en HTML-CSS, et mon dernier CV en PDF, téléchargeable directement.</p>
                     <div className="project-links">
                         <Link to="/Cv" rel="noreferrer">Ancien CV ↗</Link>
-                        <a href="CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">Télécharger le CV ↗</a>
+                        <a href="https://github.com/sylvainh2/portfolio/CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">Télécharger le CV ↗</a>
                     </div>
                     </div>
 
@@ -260,7 +260,7 @@ const Home = ()=> {
                     <h3>Ce site</h3>
                     <p>Le portfolio que vous consultez.</p>
                     <div className="project-links">
-                        <a href="https://github.com/sylvainh2/siteportfolio" target="_blank" rel="noreferrer">Portfolio ↗</a>
+                        <a href="https://github.com/sylvainh2/portfolio" target="_blank" rel="noreferrer">Portfolio ↗</a>
                     </div>
                     </div>
 
@@ -336,7 +336,7 @@ const Home = ()=> {
                     <div className="contact-row"><span>localisation</span><span>Bordeaux, France</span></div>
                     <div className="contact-row"><span>linkedin</span><a href="https://www.linkedin.com/in/sylvain-crouzier-64017780/" target="_blank" rel="noreferrer">sylvain-crouzier</a></div>
                     <div className="contact-row"><span>github</span><a href="https://github.com/sylvainh2" target="_blank" rel="noreferrer">sylvainh2</a></div>
-                    <div className="contact-row"><span>cv</span><a href="CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">télécharger (pdf)</a></div>
+                    <div className="contact-row"><span>cv</span><a href="https://github.com/sylvainh2/portfolio/CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">télécharger (pdf)</a></div>
                     </div>
                 </div>
                 </div>
