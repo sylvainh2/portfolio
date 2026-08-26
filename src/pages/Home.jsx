@@ -251,7 +251,7 @@ const Home = ()=> {
                     <p>Un ancien CV entièrement en HTML-CSS, et mon dernier CV en PDF, téléchargeable directement.</p>
                     <div className="project-links">
                         <Link to="/Cv" rel="noreferrer">Ancien CV ↗</Link>
-                        <a href={`${process.env.PUBLIC_URL}/CV_Sylvain_Crouzier.pdf`} download="CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">Télécharger le CV ↗</a>
+                        <a href="https://sylvainh2.github.io/portfolio/CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">Télécharger le CV ↗</a>
                     </div>
                     </div>
 
@@ -336,7 +336,7 @@ const Home = ()=> {
                     <div className="contact-row"><span>localisation</span><span>Bordeaux, France</span></div>
                     <div className="contact-row"><span>linkedin</span><a href="https://www.linkedin.com/in/sylvain-crouzier-64017780/" target="_blank" rel="noreferrer">sylvain-crouzier</a></div>
                     <div className="contact-row"><span>github</span><a href="https://github.com/sylvainh2" target="_blank" rel="noreferrer">sylvainh2</a></div>
-                    <div className="contact-row"><span>cv</span><a href={`${process.env.PUBLIC_URL}/CV_Sylvain_Crouzier.pdf`} download="CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">télécharger (pdf)</a></div>
+                    <div className="contact-row"><span>cv</span><a href="https://sylvainh2.github.io/portfolio/CV_Sylvain_Crouzier.pdf" target="_blank" rel="noreferrer">télécharger (pdf)</a></div>
                     </div>
                 </div>
                 </div>
