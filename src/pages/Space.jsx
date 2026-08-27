@@ -29,7 +29,7 @@ let stage = [];
 let music = [];
 let explode = [];
 let zap = [];
-const site = "https://sylvainh2.github.io/portfolio/";
+const site = "/portfolio";
 
 console.log("variables");
 let frameR = 60;
