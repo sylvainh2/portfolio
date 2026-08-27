@@ -194,10 +194,10 @@ function Memory() {
             card3 = document.createElement('img');
             card3.setAttribute('class', 'card-front');
             rand = pickUp();
-            card3.setAttribute('src', 'images/' + imgBack);
+            card3.setAttribute('src', 'https://sylvainh2.github.io/portfolio/images/' + imgBack);
             card2.append(card3);
             card4 = document.createElement('img');
-            card4.setAttribute("src", "images/" + imgArray[rand]);
+            card4.setAttribute("src", "https://sylvainh2.github.io/portfolio/images/" + imgArray[rand]);
             card4.setAttribute("class", "card-back");
             card2.append(card4);
             card5.append(card2);
